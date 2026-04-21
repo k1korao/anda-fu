@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>K1Kora | Minimal Portfolio</title>
+  <title>K1Kora | Visual Portfolio</title>
   <meta
+    id="meta-description"
     name="description"
-    content="A minimal portfolio website for visual work, design projects, and digital presentation."
+    content="A personal portfolio by K1Kora featuring digital image-making, visual experiments, and an artist statement built around motion, colour, and impact."
   >
-  <meta name="theme-color" content="#181818">
-  <meta property="og:title" content="K1Kora | Minimal Portfolio">
+  <meta name="theme-color" content="#120f12">
+  <meta id="meta-og-title" property="og:title" content="K1Kora | Visual Portfolio">
   <meta
+    id="meta-og-description"
     property="og:description"
-    content="A clean and simple portfolio focused on clarity, selected work, and direct contact."
+    content="A visual portfolio centered on motion, distortion, colour impact, and digital image-making."
   >
   <meta property="og:type" content="website">
 
@@ -28,11 +30,11 @@
   <div class="site-shell">
     <header class="site-header">
       <div class="container nav-shell">
-        <a class="brand" href="#top" aria-label="K1Kora home">
+        <a class="brand" href="#top" data-i18n-aria-label="brand.ariaLabel" aria-label="K1Kora home">
           <span class="brand-mark">K</span>
           <span class="brand-text">
             <strong>K1Kora</strong>
-            <small>Portfolio</small>
+            <small data-i18n="brand.sub">Visual Portfolio</small>
           </span>
         </a>
 
@@ -41,17 +43,23 @@
           type="button"
           aria-expanded="false"
           aria-controls="site-nav"
+          data-i18n="ui.menu"
         >
           Menu
         </button>
 
         <nav class="site-nav" id="site-nav">
-          <a href="#work">Work</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
+          <a href="#work" data-i18n="nav.work">Work</a>
+          <a href="#statement" data-i18n="nav.statement">Statement</a>
+          <a href="#journey" data-i18n="nav.journey">Journey</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+          <button class="lang-toggle" type="button" data-lang-toggle data-i18n="nav.language">
+            中文 / EN
+          </button>
           <a
             class="button button-small button-solid"
             href="mailto:K1koraoooo@gmail.com"
+            data-i18n="nav.email"
           >
             Email
           </a>
@@ -63,147 +71,267 @@
       <section class="hero section">
         <div class="container hero-grid">
           <div class="hero-copy" data-reveal>
-            <p class="eyebrow">Minimal Portfolio</p>
-            <h1>Simple presentation for art, design, and digital work.</h1>
-            <p class="lead">
-              This version is intentionally quieter and more minimal. It uses clear
-              typography, open spacing, and a restrained layout so the work feels
-              easier to browse and more professional.
+            <p class="eyebrow" data-i18n="hero.eyebrow">Visual Portfolio / Selected Works</p>
+            <h1 data-i18n="hero.title">Still images with motion, pressure, and colour.</h1>
+            <p class="lead" data-i18n="hero.lead">
+              This portfolio is built around a simple instinct: begin with an
+              ordinary reference, then push it until it feels alive. I use
+              distortion, reflective texture, and saturated colour to create
+              images that hold attention and leave a stronger afterimage.
             </p>
 
             <div class="hero-actions">
-              <a class="button button-solid" href="#work">View Work</a>
-              <a class="button button-outline" href="#contact">Get In Touch</a>
+              <a class="button button-solid" href="#work" data-i18n="hero.primary">View Projects</a>
+              <a class="button button-outline" href="#statement" data-i18n="hero.secondary">Read Statement</a>
             </div>
 
             <ul class="hero-details">
               <li>
-                <span>Email</span>
-                <strong>K1koraoooo@gmail.com</strong>
+                <span data-i18n="hero.focusLabel">Focus</span>
+                <strong data-i18n="hero.focusValue">Digital image-making, colour impact, motion studies</strong>
               </li>
               <li>
-                <span>Focus</span>
-                <strong>Portfolio, visual design, web presentation</strong>
+                <span data-i18n="hero.toolsLabel">Tools</span>
+                <strong data-i18n="hero.toolsValue">Photoshop, Levels, Hue/Saturation, Wave distortion</strong>
               </li>
               <li>
-                <span>Style</span>
-                <strong>Minimal, clean, calm, structured</strong>
+                <span data-i18n="hero.contactLabel">Contact</span>
+                <strong data-i18n="hero.contactValue">K1koraoooo@gmail.com</strong>
               </li>
             </ul>
           </div>
 
-          <aside class="hero-panel" data-reveal>
-            <p class="eyebrow">Selected Focus</p>
-            <h2>Less decoration. More clarity.</h2>
-            <p>
-              A simplified portfolio is often stronger because it lets the layout,
-              work, and contact details speak clearly without visual noise.
-            </p>
+          <div class="hero-visual" data-reveal>
+            <figure class="hero-artwork">
+              <img
+                src="assets/work-chromatic-surge.jpg"
+                alt="Abstract digital artwork with chromatic distortion and bright pink tones"
+                data-i18n-alt="alt.hero"
+                loading="eager"
+              >
+            </figure>
 
-            <div class="panel-list">
-              <article>
-                <span>01</span>
-                <p>Clean one-page presentation</p>
-              </article>
-              <article>
-                <span>02</span>
-                <p>Professional English copy</p>
-              </article>
-              <article>
-                <span>03</span>
-                <p>Direct contact with your email</p>
-              </article>
+            <div class="hero-caption">
+              <p class="eyebrow" data-i18n="featured.eyebrow">Featured Work</p>
+              <h2 data-i18n="featured.title">Chromatic Surge</h2>
+              <p data-i18n="featured.body">
+                A high-impact abstract study built from distortion, metallic form,
+                and intense colour contrast.
+              </p>
             </div>
-          </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section manifesto">
+        <div class="container">
+          <div class="manifesto-shell" data-reveal>
+            <p class="eyebrow" data-i18n="note.eyebrow">Portfolio Note</p>
+            <div class="manifesto-grid">
+              <h2 data-i18n="note.title">I want a static image to stop the scroll.</h2>
+              <p data-i18n="note.body">
+                These works were shaped by the way attention moves today: quickly,
+                fragmentedly, and often without patience. Instead of making quiet
+                images that disappear in a feed, I am interested in visual work
+                that creates impact through motion, distortion, and controlled
+                saturation.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="section" id="work">
         <div class="container">
           <div class="section-heading" data-reveal>
-            <p class="eyebrow">Selected Work</p>
-            <h2>A quieter layout for showcasing projects.</h2>
-            <p class="section-copy">
-              These cards are now simpler and easier to replace with your real
-              project titles, descriptions, links, and images later.
+            <p class="eyebrow" data-i18n="work.eyebrow">Selected Work</p>
+            <h2 data-i18n="work.title">Three studies from the same visual direction.</h2>
+            <p class="section-copy" data-i18n="work.copy">
+              This series explores how colour, warped form, and digital
+              manipulation can transform familiar images into something more
+              dynamic, unstable, and memorable.
             </p>
           </div>
 
-          <div class="work-grid">
-            <article class="work-card" data-reveal>
-              <p class="work-type">Website</p>
-              <h3>Studio Portfolio Landing Page</h3>
-              <p>
-                A minimal landing page designed to introduce a brand, highlight
-                selected work, and make contact information immediately visible.
-              </p>
-              <div class="tag-row">
-                <span>HTML</span>
-                <span>Minimal Layout</span>
-                <span>Editorial Spacing</span>
+          <div class="project-list">
+            <article class="project-card project-card-wide" data-reveal>
+              <div class="project-media project-media-double">
+                <img
+                  src="assets/work-reflective-form.jpg"
+                  alt="Distorted abstract image with yellow, red, and black reflective forms"
+                  data-i18n-alt="alt.work1a"
+                  loading="lazy"
+                >
+                <img
+                  src="assets/work-impact-wave.jpg"
+                  alt="Abstract wave-distorted artwork with bright yellow and red colour fields"
+                  data-i18n-alt="alt.work1b"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="project-content">
+                <p class="project-index">01</p>
+                <h3 data-i18n="work1.title">Reflective Form Study</h3>
+                <p data-i18n="work1.body">
+                  Beginning with a simple square reference, I adjusted the colour
+                  distribution and then used wave distortion to make the surface
+                  feel unstable, reflective, and full of internal motion. The
+                  image moves away from documentation and toward visual tension.
+                </p>
+                <div class="tag-row">
+                  <span data-i18n="work1.tag1">Levels</span>
+                  <span data-i18n="work1.tag2">Wave Filter</span>
+                  <span data-i18n="work1.tag3">Reflective Texture</span>
+                  <span data-i18n="work1.tag4">High Contrast</span>
+                </div>
               </div>
             </article>
 
-            <article class="work-card" data-reveal>
-              <p class="work-type">Visual Direction</p>
-              <h3>Art and Image Presentation</h3>
-              <p>
-                A clean case-study format for showing visual experiments,
-                photography, art direction, or classroom work in a more refined way.
-              </p>
-              <div class="tag-row">
-                <span>Gallery</span>
-                <span>Case Study</span>
-                <span>Visual Identity</span>
+            <article class="project-card" data-reveal>
+              <div class="project-media">
+                <img
+                  src="assets/work-mosaic-pulse.jpg"
+                  alt="Mosaic-inspired digital artwork with pink and cyan tones"
+                  data-i18n-alt="alt.work2"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="project-content">
+                <p class="project-index">02</p>
+                <h3 data-i18n="work2.title">Mosaic Pulse Study</h3>
+                <p data-i18n="work2.body">
+                  This piece started from a mosaic puppy reference. I intensified
+                  the red channel, pushed saturation, and distorted the original
+                  blocky structure until it felt more alive, energetic, and
+                  visually charged.
+                </p>
+                <div class="tag-row">
+                  <span data-i18n="work2.tag1">Hue / Saturation</span>
+                  <span data-i18n="work2.tag2">Red Channel</span>
+                  <span data-i18n="work2.tag3">Mosaic Source</span>
+                  <span data-i18n="work2.tag4">Digital Distortion</span>
+                </div>
               </div>
             </article>
 
-            <article class="work-card" data-reveal>
-              <p class="work-type">Client Facing</p>
-              <h3>Project Overview Page</h3>
-              <p>
-                A simple structure for presenting a project to clients, teachers,
-                collaborators, or recruiters with a stronger first impression.
-              </p>
-              <div class="tag-row">
-                <span>Presentation</span>
-                <span>Responsive</span>
-                <span>Fast Loading</span>
+            <article class="project-card" data-reveal>
+              <div class="project-media">
+                <img
+                  src="assets/work-chromatic-surge.jpg"
+                  alt="Large-scale abstract artwork with pink, grey, metallic purple, and neon green areas"
+                  data-i18n-alt="alt.work3"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="project-content">
+                <p class="project-index">03</p>
+                <h3 data-i18n="work3.title">Chromatic Surge</h3>
+                <p data-i18n="work3.body">
+                  The third work pushes the series into a more abstract direction.
+                  Here the goal is not only to transform the source image, but to
+                  build impact through scale, velocity, and colour pressure until
+                  the still image feels almost cinematic.
+                </p>
+                <div class="tag-row">
+                  <span data-i18n="work3.tag1">Abstract Study</span>
+                  <span data-i18n="work3.tag2">Colour Impact</span>
+                  <span data-i18n="work3.tag3">Motion Illusion</span>
+                  <span data-i18n="work3.tag4">Large Scale Energy</span>
+                </div>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="about">
-        <div class="container about-grid">
-          <div class="about-copy" data-reveal>
-            <p class="eyebrow">About</p>
-            <h2>This version keeps the portfolio cleaner and more focused.</h2>
-            <p>
-              The page has been simplified so it feels lighter and more intentional.
-              Instead of heavy visual effects and dense copy, it now emphasizes
-              structure, readability, and a calmer overall presentation.
+      <section class="section" id="statement">
+        <div class="container statement-grid">
+          <div class="statement-copy" data-reveal>
+            <p class="eyebrow" data-i18n="statement.eyebrow">Artist Statement</p>
+            <h2 data-i18n="statement.title">Colour and distortion are part of the meaning, not just the effect.</h2>
+            <p data-i18n="statement.body1">
+              I am interested in what happens when a familiar image is pushed past
+              recognition. By changing colour balance, stretching edges, and
+              reshaping the source through digital tools, I can turn something
+              still into something that feels active and difficult to ignore.
             </p>
-            <p>
-              It is also fully in English now, which makes it easier to share with
-              a wider audience.
+            <p data-i18n="statement.body2">
+              In a visual culture shaped by short videos and fragmented attention,
+              I want a single image to feel powerful enough to slow the viewer
+              down. My work uses visual pressure, contrast, and movement to create
+              that pause.
             </p>
           </div>
 
-          <div class="about-panel" data-reveal>
-            <div class="about-stat">
-              <strong>Minimal visual language</strong>
-              <span>Soft neutrals, simple borders, and clear typography.</span>
-            </div>
-            <div class="about-stat">
-              <strong>Readable project layout</strong>
-              <span>Less clutter and clearer hierarchy across the page.</span>
-            </div>
-            <div class="about-stat">
-              <strong>Direct contact</strong>
-              <span>Your email is now visible and ready for outreach.</span>
-            </div>
+          <aside class="statement-panel" data-reveal>
+            <figure class="reference-figure">
+              <img
+                src="assets/reference-square.jpg"
+                alt="Reference image showing two square forms on an orange background"
+                data-i18n-alt="alt.reference"
+                loading="lazy"
+              >
+            </figure>
+            <p class="panel-kicker" data-i18n="statement.panelKicker">From reference to transformation</p>
+            <p class="panel-note" data-i18n="statement.panelNote">
+              My process often begins with an ordinary object or fragment. The
+              final image emerges through layers of adjustment, disruption, and
+              intensified colour.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="journey">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow" data-i18n="journey.eyebrow">Creative Journey</p>
+            <h2 data-i18n="journey.title">How this body of work reflects the way I think.</h2>
+            <p class="section-copy" data-i18n="journey.copy">
+              This portfolio is not just a gallery. It also shows the ideas and
+              working habits behind the images.
+            </p>
+          </div>
+
+          <div class="journey-grid">
+            <article class="journey-card" data-reveal>
+              <span class="journey-step">01</span>
+              <h3 data-i18n="journey1.title">Observation</h3>
+              <p data-i18n="journey1.body">
+                I often begin with ordinary materials and references, looking for
+                shapes that can be stretched beyond their original function.
+              </p>
+            </article>
+
+            <article class="journey-card" data-reveal>
+              <span class="journey-step">02</span>
+              <h3 data-i18n="journey2.title">Manipulation</h3>
+              <p data-i18n="journey2.body">
+                Photoshop becomes a way to test pressure: levels, saturation,
+                colour channels, and wave distortion all push the image into motion.
+              </p>
+            </article>
+
+            <article class="journey-card" data-reveal>
+              <span class="journey-step">03</span>
+              <h3 data-i18n="journey3.title">Escalation</h3>
+              <p data-i18n="journey3.body">
+                Each draft grows louder and more unstable. I keep increasing
+                contrast and movement until the visual energy feels unavoidable.
+              </p>
+            </article>
+
+            <article class="journey-card" data-reveal>
+              <span class="journey-step">04</span>
+              <h3 data-i18n="journey4.title">Impact</h3>
+              <p data-i18n="journey4.body">
+                The final goal is emotional attention: a static image that feels
+                fast, vivid, and memorable enough to invite a second look.
+              </p>
+            </article>
           </div>
         </div>
       </section>
@@ -211,12 +339,12 @@
       <section class="section" id="contact">
         <div class="container contact-shell" data-reveal>
           <div class="contact-copy">
-            <p class="eyebrow">Contact</p>
-            <h2>Let the portfolio stay simple and easy to reach.</h2>
-            <p>
-              If you want, this section can later be expanded with Instagram,
-              Behance, LinkedIn, or a custom contact form. For now, it stays direct
-              and minimal.
+            <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
+            <h2 data-i18n="contact.title">If the work speaks to you, reach out.</h2>
+            <p data-i18n="contact.body">
+              I am open to conversations around collaborations, commissions,
+              exhibitions, and future visual projects. This site is a direct way
+              to see my work and start that conversation.
             </p>
           </div>
 
@@ -232,8 +360,8 @@
             >
               github.com/k1korao
             </a>
-            <p class="contact-note">
-              Available for portfolio updates, creative collaborations, and design work.
+            <p class="contact-note" data-i18n="contact.note">
+              For art direction, digital image-making, and portfolio-related opportunities.
             </p>
           </div>
         </div>
@@ -242,8 +370,8 @@
 
     <footer class="site-footer">
       <div class="container footer-shell">
-        <p>K1Kora Portfolio</p>
-        <p>&copy; <span data-year></span> Minimal by design.</p>
+        <p data-i18n="footer.title">K1Kora Portfolio</p>
+        <p>&copy; <span data-year></span> <span data-i18n="footer.tagline">Built around motion, colour, and visual impact.</span></p>
       </div>
     </footer>
   </div>
