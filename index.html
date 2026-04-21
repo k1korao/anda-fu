@@ -1,84 +1,371 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kikora | Creative Portfolio</title>
+  <meta
+    name="description"
+    content="一个更专业、更有视觉表现力的作品集网站首页，适合个人品牌、艺术创作、设计项目与自由职业者展示。"
+  >
+  <meta name="theme-color" content="#1f1814">
+  <meta property="og:title" content="Kikora | Creative Portfolio">
+  <meta
+    property="og:description"
+    content="用更成熟的结构、排版和视觉节奏，把你的作品集做成真正能对外展示的专业网页。"
+  >
+  <meta property="og:type" content="website">
 
-  <!-- SEO: Search engines read these to understand your page -->
-  <title>Your Name | Portfolio</title>
-  <meta name="description" content="A brief description of your awesome project or portfolio.">
-
-  <!-- Typography: Importing 'Inter' from Google Fonts for a premium look -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
-
-  <!-- CSS: Link to your stylesheet (make sure you have a style.css file) -->
-  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Syne:wght@500;700;800&amp;display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="andafu.css">
 </head>
 <body>
+  <div class="site-shell">
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+    <div class="page-noise" aria-hidden="true"></div>
 
-  <div class="glow-bg"></div>
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="#top" aria-label="Kikora 首页">
+          <span class="brand-mark">K</span>
+          <span class="brand-text">
+            <strong>Kikora</strong>
+            <small>Portfolio</small>
+          </span>
+        </a>
 
-  <!-- Navigation Bar -->
-  <header id="header">
-    <nav class="container">
-      <div class="logo">MyBrand.</div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          菜单
+        </button>
 
-  <!-- Main Content Area -->
-  <main>
-
-    <!-- Hero Section: The first thing visitors see -->
-    <section id="hero" class="hero hidden">
-      <div class="container text-center">
-        <h1>Hello, I'm <br/><span class="highlight">Your Name</span></h1>
-        <p>I build elegant and dynamic web applications.</p>
-        <a href="#projects" class="btn-primary">View My Work</a>
+        <nav class="site-nav" id="site-nav">
+          <a href="#work">作品</a>
+          <a href="#about">关于</a>
+          <a href="#process">流程</a>
+          <a href="#contact">联系</a>
+          <a
+            class="button button-small button-solid"
+            href="https://github.com/k1korao"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <!-- Additional sections like About, Projects goes here -->
-    <section id="about" class="section hidden">
-      <div class="container text-center">
-        <h2>About Me</h2>
-        <p>I am passionate about creating interactive, robust, and beautiful digital experiences. Every pixel matters.</p>
-      </div>
-    </section>
+    <main id="top">
+      <section class="hero section">
+        <div class="container hero-grid">
+          <div class="hero-copy" data-reveal>
+            <p class="eyebrow">Creative Portfolio / HTML Website</p>
+            <h1>让你的作品集首页，看起来像真正会接项目的人。</h1>
+            <p class="lead">
+              这版首页把视觉表达、信息层次和轻量动效重新整理好了。
+              不再只是把内容堆上去，而是让访客一打开就感受到专业感与完成度。
+            </p>
 
-    <section id="projects" class="section hidden">
-      <div class="container text-center">
-        <h2>Selected Projects</h2>
-        <div class="projects-grid">
-          <div class="project-card placeholder-1">
-            <h3>Project Alpha</h3>
+            <div class="hero-actions">
+              <a class="button button-solid" href="#work">查看精选作品</a>
+              <a class="button button-outline" href="#contact">联系合作</a>
+            </div>
+
+            <ul class="hero-metrics">
+              <li>
+                <strong>01</strong>
+                <span>更清楚的展示节奏</span>
+              </li>
+              <li>
+                <strong>02</strong>
+                <span>更成熟的品牌感视觉</span>
+              </li>
+              <li>
+                <strong>03</strong>
+                <span>桌面与手机都能正常展示</span>
+              </li>
+            </ul>
           </div>
-          <div class="project-card placeholder-2">
-            <h3>Project Beta</h3>
-          </div>
-          <div class="project-card placeholder-3">
-            <h3>Project Gamma</h3>
+
+          <div class="hero-visual" data-reveal>
+            <article class="visual-panel panel-main">
+              <div class="panel-topline">
+                <span>Featured Direction</span>
+                <span>2026</span>
+              </div>
+              <h2>把作品包装成值得被认真浏览的网页展示。</h2>
+              <p>
+                通过更稳的排版、更有层次的卡片结构和统一的色彩语言，
+                让作品本身看起来更有价值，也更适合对外发送给客户或老师。
+              </p>
+
+              <div class="mini-grid">
+                <article>
+                  <span>Branding</span>
+                  <strong>视觉叙事</strong>
+                </article>
+                <article>
+                  <span>Layout</span>
+                  <strong>层次更清楚</strong>
+                </article>
+                <article>
+                  <span>Motion</span>
+                  <strong>轻量动态</strong>
+                </article>
+                <article>
+                  <span>Responsive</span>
+                  <strong>移动端适配</strong>
+                </article>
+              </div>
+            </article>
+
+            <article class="floating-card card-one">
+              <span class="card-label">Portfolio System</span>
+              <strong>Selected Work</strong>
+              <p>更适合艺术、设计、摄影、视觉项目的展示结构。</p>
+            </article>
+
+            <article class="floating-card card-two">
+              <span class="card-label">Launch Ready</span>
+              <strong>Static &amp; Fast</strong>
+              <p>纯 HTML / CSS / JS，继续修改和部署都会很轻松。</p>
+            </article>
           </div>
         </div>
+      </section>
+
+      <section class="section section-tight">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Why It Feels Better</p>
+            <h2>专业感来自结构，不只是换一个颜色。</h2>
+          </div>
+
+          <div class="value-grid">
+            <article class="value-card" data-reveal>
+              <span class="card-index">01</span>
+              <h3>首页不再像练习模板</h3>
+              <p>
+                重新安排了视觉重心、标题层级与区块节奏，让整页看起来更像一个已经准备好展示的真实网站。
+              </p>
+            </article>
+            <article class="value-card" data-reveal>
+              <span class="card-index">02</span>
+              <h3>作品信息更容易被读懂</h3>
+              <p>
+                每个项目都能用标题、简介、标签与结果说明承接，不会让人看到一半就失去兴趣。
+              </p>
+            </article>
+            <article class="value-card" data-reveal>
+              <span class="card-index">03</span>
+              <h3>适合你继续替换真实内容</h3>
+              <p>
+                结构已经搭好，你后面只要把项目名称、图片、链接和介绍换成自己的内容就能继续使用。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="work">
+        <div class="container">
+          <div class="section-heading split-heading" data-reveal>
+            <div>
+              <p class="eyebrow">Selected Projects</p>
+              <h2>适合作品集展示的项目卡片布局</h2>
+            </div>
+            <p class="section-copy">
+              这里先放入了更专业的展示框架。你之后可以把每个卡片替换成自己的作品标题、封面图和项目链接。
+            </p>
+          </div>
+
+          <div class="work-grid">
+            <article class="work-card work-featured" data-reveal>
+              <div class="work-media gradient-a">
+                <span>01</span>
+              </div>
+              <div class="work-copy">
+                <p class="work-type">Brand Website</p>
+                <h3>个人品牌展示页</h3>
+                <p>
+                  用更有呼吸感的留白、大标题和案例卡结构，
+                  让个人介绍、代表作品和联系信息都能在同一页里自然展开。
+                </p>
+                <div class="tag-row">
+                  <span>HTML</span>
+                  <span>Editorial Layout</span>
+                  <span>Personal Identity</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="work-card" data-reveal>
+              <div class="work-media gradient-b">
+                <span>02</span>
+              </div>
+              <div class="work-copy">
+                <p class="work-type">Visual Project</p>
+                <h3>艺术项目陈列页</h3>
+                <p>
+                  更适合放摄影、绘画、视觉实验或课堂作品，把作品看起来做得更完整、更有策展感。
+                </p>
+                <div class="tag-row">
+                  <span>Gallery</span>
+                  <span>Case Study</span>
+                  <span>Art Direction</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="work-card" data-reveal>
+              <div class="work-media gradient-c">
+                <span>03</span>
+              </div>
+              <div class="work-copy">
+                <p class="work-type">Client Ready</p>
+                <h3>对外发送的项目落地页</h3>
+                <p>
+                  适合把一组重点作品浓缩成清楚的网页介绍，
+                  发给合作方、客户、导师或招聘方时也更有完成度。
+                </p>
+                <div class="tag-row">
+                  <span>Pitch</span>
+                  <span>Responsive</span>
+                  <span>Fast Loading</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-contrast" id="about">
+        <div class="container about-grid">
+          <div class="about-copy" data-reveal>
+            <p class="eyebrow">About This Version</p>
+            <h2>这是一个已经替你铺好基础结构的专业版本。</h2>
+            <p>
+              我把原来很基础的占位页面升级成了完整的作品集首页：
+              包括首屏、价值说明、项目卡、关于区块、流程区块与联系区块。
+            </p>
+            <p>
+              整体风格走的是偏创意、偏作品展示的方向，适合你继续往里放真实的项目内容。
+              如果后面你想加图片、更多页面或者作品详情页，也可以继续在这个基础上扩展。
+            </p>
+          </div>
+
+          <div class="about-panel" data-reveal>
+            <div class="about-stat">
+              <strong>HTML + CSS + JS</strong>
+              <span>纯静态结构，后续维护和部署都简单</span>
+            </div>
+            <div class="about-stat">
+              <strong>Responsive Layout</strong>
+              <span>针对桌面与移动端都做了排版调整</span>
+            </div>
+            <div class="about-stat">
+              <strong>Professional Sections</strong>
+              <span>页面结构更像真正对外展示的作品网站</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="process">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Process</p>
+            <h2>这类作品集网站，最重要的是这四步。</h2>
+          </div>
+
+          <div class="process-grid">
+            <article class="process-card" data-reveal>
+              <span class="process-step">Step 1</span>
+              <h3>先让别人知道你是谁</h3>
+              <p>首屏先讲清楚身份、方向和你擅长展示的内容，而不是把所有内容一股脑堆上去。</p>
+            </article>
+            <article class="process-card" data-reveal>
+              <span class="process-step">Step 2</span>
+              <h3>再让作品有顺序地出现</h3>
+              <p>项目卡先放最有代表性的内容，标题、简介和标签都帮访客更快理解你的强项。</p>
+            </article>
+            <article class="process-card" data-reveal>
+              <span class="process-step">Step 3</span>
+              <h3>让页面有呼吸感和节奏</h3>
+              <p>留白、卡片大小、色块和文字层级都在帮你建立“专业感”，这比单纯堆内容更重要。</p>
+            </article>
+            <article class="process-card" data-reveal>
+              <span class="process-step">Step 4</span>
+              <h3>最后让联系动作足够清楚</h3>
+              <p>页尾必须给出一个明确出口，这样别人看完作品后才知道下一步怎么联系你。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tight">
+        <div class="container">
+          <div class="quote-card" data-reveal>
+            <p class="quote-text">
+              “一个好的作品集网站，不是把作品上传完就结束，而是让别人愿意继续往下看。”
+            </p>
+            <p class="quote-caption">
+              现在这个版本已经具备这种基础了，你后面只需要继续替换成自己的真实项目。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="container contact-shell" data-reveal>
+          <div class="contact-copy">
+            <p class="eyebrow">Ready To Publish</p>
+            <h2>页面已经具备上线展示的基础版本。</h2>
+            <p>
+              我已经把结构和风格都搭好了。接下来你只要继续替换自己的项目图、介绍文字和真实联系方式，
+              这个网站就可以持续作为你的正式作品集使用。
+            </p>
+          </div>
+
+          <div class="contact-card">
+            <a
+              class="contact-link"
+              href="https://github.com/k1korao"
+              target="_blank"
+              rel="noreferrer"
+            >
+              访问 GitHub 主页
+            </a>
+            <a class="contact-link contact-link-muted" href="mailto:hello@example.com">
+              hello@example.com
+            </a>
+            <p class="contact-note">
+              提示：把这里的邮箱和社交链接替换成你自己的真实信息，就能直接正式对外展示。
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-shell">
+        <p>Kikora Portfolio</p>
+        <p>&copy; <span data-year></span> Built for a polished first impression.</p>
       </div>
-    </section>
+    </footer>
+  </div>
 
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container text-center">
-      <p>&copy; 2026 Your Name. Built with HTML & CSS.</p>
-    </div>
-  </footer>
-
-  <!-- JavaScript: Link to your logic scripts at the bottom for faster page load -->
   <script src="script.js"></script>
 </body>
 </html>
