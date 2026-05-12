@@ -304,6 +304,8 @@ img {
 .hero-details li,
 .manifesto-shell,
 .project-card,
+.artifact-viewer-panel,
+.artifact-notes,
 .statement-panel,
 .journey-card,
 .contact-shell {
@@ -351,6 +353,7 @@ img {
 
 .hero-caption,
 .project-content,
+.artifact-notes,
 .statement-panel,
 .journey-card,
 .contact-card {
@@ -452,6 +455,115 @@ img {
 .project-content p:last-of-type,
 .journey-card p {
   margin-bottom: 0;
+}
+
+.artifact-section {
+  padding-top: 40px;
+}
+
+.artifact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.artifact-viewer-panel,
+.artifact-notes {
+  border-radius: var(--radius-xl);
+}
+
+.artifact-viewer-panel {
+  min-height: 620px;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(25, 216, 202, 0.15), transparent 42%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 248, 242, 0.68));
+}
+
+model-viewer {
+  display: block;
+  width: 100%;
+  min-height: 620px;
+  height: 100%;
+  background-color: transparent;
+  --poster-color: transparent;
+}
+
+.artifact-notes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.artifact-notes h3 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  line-height: 0.96;
+  letter-spacing: -0.03em;
+}
+
+.artifact-notes p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.artifact-facts {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.artifact-facts div {
+  padding: 16px;
+  border: 1px solid rgba(24, 18, 22, 0.1);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.artifact-facts span,
+.source-links a {
+  color: rgba(53, 30, 39, 0.76);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.artifact-facts strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.96rem;
+  line-height: 1.5;
+}
+
+.artifact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.source-links {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.source-links a {
+  display: inline-flex;
+  width: fit-content;
+  border-bottom: 1px solid rgba(24, 18, 22, 0.22);
+  transition:
+    color 180ms ease,
+    border-color 180ms ease;
+}
+
+.source-links a:hover,
+.source-links a:focus-visible {
+  color: var(--text);
+  border-color: var(--text);
 }
 
 .tag-row {
@@ -570,6 +682,7 @@ img {
   .contact-shell,
   .project-card,
   .project-card-wide,
+  .artifact-grid,
   .manifesto-grid {
     grid-template-columns: 1fr;
   }
@@ -585,6 +698,11 @@ img {
 
   .journey-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .artifact-viewer-panel,
+  model-viewer {
+    min-height: 540px;
   }
 }
 
@@ -671,12 +789,18 @@ img {
 
   .hero-caption,
   .project-content,
+  .artifact-notes,
   .statement-panel,
   .journey-card,
   .contact-card,
   .manifesto-shell,
   .contact-shell {
     padding: 20px;
+  }
+
+  .artifact-viewer-panel,
+  model-viewer {
+    min-height: 430px;
   }
 
   .journey-grid {

@@ -24,6 +24,7 @@
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   >
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
   <link rel="stylesheet" href="andafu.css">
 </head>
 <body>
@@ -50,6 +51,7 @@
 
         <nav class="site-nav" id="site-nav">
           <a href="#work" data-i18n="nav.work">Work</a>
+          <a href="#artifact" data-i18n="nav.artifact">3D Artifact</a>
           <a href="#statement" data-i18n="nav.statement">Statement</a>
           <a href="#journey" data-i18n="nav.journey">Journey</a>
           <a href="#contact" data-i18n="nav.contact">Contact</a>
@@ -83,6 +85,7 @@
             <div class="hero-actions">
               <a class="button button-solid" href="#work" data-i18n="hero.primary">View Projects</a>
               <a class="button button-outline" href="#statement" data-i18n="hero.secondary">Read Statement</a>
+              <a class="button button-outline" href="#artifact" data-i18n="hero.tertiary">Inspect 3D Model</a>
             </div>
 
             <ul class="hero-details">
@@ -243,6 +246,107 @@
                 </div>
               </div>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section artifact-section" id="artifact">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow" data-i18n="artifact.eyebrow">3D Artifact Study</p>
+            <h2 data-i18n="artifact.title">Blue-and-white dragon jar translated into a web-viewable model.</h2>
+            <p class="section-copy" data-i18n="artifact.copy">
+              This project reconstructs a historical ceramic object from image references,
+              then presents the Blender model as a GLB file that can be rotated, zoomed,
+              and inspected directly on the website.
+            </p>
+          </div>
+
+          <div class="artifact-grid">
+            <div class="artifact-viewer-panel" data-reveal>
+              <model-viewer
+                src="assets/models/dragon-jar-final.glb"
+                poster="assets/posters/dragon-jar-poster.png"
+                alt="A textured 3D model of a blue-and-white dragon jar"
+                data-i18n-alt="alt.artifactModel"
+                shadow-intensity="1"
+                camera-controls
+                auto-rotate
+                ar
+              ></model-viewer>
+            </div>
+
+            <aside class="artifact-notes" data-reveal>
+              <p class="project-index">04</p>
+              <h3 data-i18n="artifact.notesTitle">PDF highlights and source context</h3>
+              <p data-i18n="artifact.notesBody">
+                I selected a dragon jar as the source artifact because its ceramic form,
+                painted surface, and museum history connect image documentation with
+                digital reconstruction.
+              </p>
+
+              <div class="artifact-facts">
+                <div>
+                  <span data-i18n="artifact.fact1Label">Source</span>
+                  <strong data-i18n="artifact.fact1Value">Jar with dragon, The Metropolitan Museum of Art</strong>
+                </div>
+                <div>
+                  <span data-i18n="artifact.fact2Label">Process</span>
+                  <strong data-i18n="artifact.fact2Value">Image reference, Blender modeling, UV texture, GLB export</strong>
+                </div>
+                <div>
+                  <span data-i18n="artifact.fact3Label">Submission</span>
+                  <strong data-i18n="artifact.fact3Value">Proposal, references, three drafts, final render, and model file</strong>
+                </div>
+              </div>
+
+              <div class="artifact-actions">
+                <a
+                  class="button button-solid"
+                  href="assets/docs/dragon-jar-submission.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-i18n="artifact.pdfLink"
+                >
+                  Open Project PDF
+                </a>
+                <a
+                  class="button button-outline"
+                  href="assets/models/dragon-jar-final.glb"
+                  download
+                  data-i18n="artifact.modelLink"
+                >
+                  Download GLB
+                </a>
+              </div>
+
+              <div class="source-links">
+                <a
+                  href="https://www.metmuseum.org/art/collection/search/39666"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-i18n="artifact.source1"
+                >
+                  Met object record
+                </a>
+                <a
+                  href="https://www.metmuseum.org/toah/works-of-art/37.191.1"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-i18n="artifact.source2"
+                >
+                  Met historical essay
+                </a>
+                <a
+                  href="https://82nd-and-fifth.metmuseum.org/toah/ht/08/eac.html"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-i18n="artifact.source3"
+                >
+                  Ming dynasty timeline
+                </a>
+              </div>
+            </aside>
           </div>
         </div>
       </section>
